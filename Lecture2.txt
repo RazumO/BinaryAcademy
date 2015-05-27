@@ -1,0 +1,48 @@
+
+Получить список отелей в стране:
+
+GET /restapi/country/Ukraine/hotel HTTP 1.1
+Host: my.site.com
+User-Agent: Chrome/43.0.2357.81
+
+Добавить страну
+
+POST /restapi/country HTTP 1.1
+Host: my.site.com
+Content-Type: application/json
+Content-Length: 59
+User-Agent: Chrome/43.0.2357.81
+
+{"Name":"Poland","Description":"Best neighbour of Ukraine"}
+
+Добавить отель в страну:
+
+POST /restapi/country/Ukraine/hotel HTTP 1.1
+Host: my.site.com
+Content-Type: application/json
+Content-Length: 64
+User-Agent: Chrome/43.0.2357.81
+
+{"Name":"Lviv hotel", "Description":"Lviv traditions in Poland"}
+
+Удалить определенный отель:
+
+DELETE /restapi/hotel/13 HTTP 1.1
+Host: my.site.com
+User-Agent: Chrome/43.0.2357.81
+
+Получить информацию об определенном отеле:
+
+GET /restapi/hotel/23 HTTP 1.1
+Host: my.site.com
+User-Agent: Chrome/43.0.2357.81
+
+Обновить информацию об определенном отеле
+
+PUT /restapi/hotel/14 HTTP 1.1
+Host: my.site.com
+Content-Type: application/json
+Content-Length: 17
+User-Agent: Chrome/43.0.2357.81
+
+{"name":"Hilton"}
