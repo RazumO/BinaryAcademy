@@ -1,0 +1,50 @@
+
+//Написать запрос-агрегацию для выборки всех студентов,
+// у которых результат по экзамену (type: "exam") более 90% (использование unwind)
+
+db.results.aggregate([
+	{
+		$unwind: "$scores"
+	},
+	{
+		$match: {"scores.type": "exam", "scores.score": {$gt: 90}}
+	},
+	{
+		$project: {
+			"name": "$name",
+			"exam_score": "$scores.score"
+		} 
+	}
+]).pretty()
+
+
+//Студенту с именем Vinnie Auerbach добавить поле “accepted” со значением true
+
+db.results.update({"name": "Vinnie Auerbach"}, {$set: {"accepted": "true"}})
+
+
+//Написать запрос для поиска всех студентов,
+// у которых score > 93% и меньше 95% по любому из типов выполненных заданий.
+
+////прочитав документацію, мав би працювати, але в мене не працює
+
+db.results.find( {"scores.score": {$gt: 93, $lt: 95}} )
+
+
+//можна через агрегацію, але будуть повторювані записи
+db.results.aggregate([
+	{
+		$unwind: "$scores"
+	},
+	{
+		$match: {"scores.score": {$gt: 93, $lt: 95}}
+	},
+	{
+		$project: {
+			"name": "$name"
+		} 
+	}
+]).pretty()
+
+
+
