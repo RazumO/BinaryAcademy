@@ -57,6 +57,7 @@ $().ready(function(){
 				li.removeClass("checked");
 				input.css("text-decoration", "none");
 				$("#markAll").removeAttr("checked");
+				//target.removeAttr("checked");-------------
 			}
 		});
 
@@ -110,7 +111,7 @@ $().ready(function(){
 					var id = cur.attr("id");
 					$("#li-" + id).addClass("checked");
 					$("#" + id).css("text-decoration", "line-through")
-					$("#checkbox-" + id).attr("checked", "true");
+					$("#checkbox-" + id).prop('checked', "true");
 				}
 
 			} else {
