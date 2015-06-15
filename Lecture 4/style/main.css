@@ -1,0 +1,80 @@
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+#wrapper {
+	margin: 20px;
+	width: 380px;
+}
+
+#wrapper h2 {
+	text-align: center;
+}
+
+#view {
+	padding: 6px;
+	border-radius: 5px;
+	width: 120px;
+	border: 1px solid grey;
+}
+
+#view:focus {
+	border: 1px solid #61A0D3;
+	border-radius: 5px;
+}
+
+#addGoods {
+	padding: 6px;
+	border-radius: 5px;
+	border: 1px solid grey;
+}
+
+#addGoods:active {
+	border-radius: 5px;
+	top: 1px;
+	left: 1px;
+	
+}
+
+#goods {
+	padding-left: 0px;
+}
+
+.goods {
+	border: 1px solid white;
+	padding: 6px;
+	z-index: -1;
+	margin-left: 4px;
+	border-radius: 5px;
+}
+
+.goods:focus {
+	border-width: 1px;
+}
+
+.goods_db{
+	border: 1px solid #61A0D3;
+	border-radius: 5px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.button-delete {
+	visibility: hidden;
+}
+
+.checked {
+	opacity: 0.5;
+	text-decoration: line-through;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.visible {
+	visibility: visible;
+}
