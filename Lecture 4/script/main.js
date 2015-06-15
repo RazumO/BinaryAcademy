@@ -135,6 +135,7 @@ $().ready(function(){
 			var id = cur.attr("data-id");
 			$("#li-" + id).remove();
 		}
+		$("#markAll").removeAttr("checked");
 	});
 	
 });
