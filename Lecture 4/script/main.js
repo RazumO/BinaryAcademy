@@ -11,6 +11,7 @@ $().ready(function(){
 		i++;
 		$("#view").val("");
 		$("#aditionalPanel").removeClass("hidden");
+		$("#markAll").removeAttr("checked");
 
 		$(".goods").on("click", function(e) {
 			event.preventDefault();
@@ -55,6 +56,7 @@ $().ready(function(){
 			} else {
 				li.removeClass("checked");
 				input.css("text-decoration", "none");
+				$("#markAll").removeAttr("checked");
 			}
 		});
 
@@ -108,7 +110,7 @@ $().ready(function(){
 					var id = cur.attr("id");
 					$("#li-" + id).addClass("checked");
 					$("#" + id).css("text-decoration", "line-through")
-					$("#checkbox-" + id).css("checked", "true");
+					$("#checkbox-" + id).attr("checked", "true");
 				}
 
 			} else {
@@ -119,7 +121,7 @@ $().ready(function(){
 					var id = cur.attr("data-id");
 					$("#li-" + id).removeClass("checked");
 					$("#" + id).css("text-decoration", "none")
-					$("#checkbox-" + id).css("checked", "false");
+					$("#checkbox-" + id).removeAttr("checked");
 				}
 			}
 		});
