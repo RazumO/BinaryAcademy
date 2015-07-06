@@ -1,0 +1,178 @@
+body {
+	background-color: #CFE2F3;
+	font: 14px Arial, Helvetica, sans-serif;
+	padding: 5px;
+}
+
+header {
+	height: 100px;
+	margin: 10px;
+	min-width: 580px;
+	line-height: 100px;
+}
+
+	#figure {
+		height: 100%;
+		float: left;
+		padding-right: 10px;
+	}
+
+	header h2 {
+		float: left;
+		margin: 0px;
+	}
+
+.clear {
+	clear: both;
+}
+
+#table-wrapper {
+	display: table;
+}
+
+menu {
+	display: table-cell;
+	vertical-align: top;
+	min-width: 270px;
+	width: 270px;
+	height: 650px;
+	margin: 0;
+	padding-left: 0px;
+	outline: 1px solid red;
+}
+
+	menu ul {
+		padding: 0px;
+		margin: 0px;
+		list-style-type: none;
+	}
+
+	menu ul li {
+
+		box-sizing: border-box;
+		height: 30px;
+		width: 100%;
+		padding: 3px;
+		border: 1px solid green;
+		font-size: 120%;
+		background-color: #B6D7A8;
+	}
+
+main {
+	display: table-cell;
+	width: 100%;
+	height: 650px;
+	outline: 1px solid black;
+}
+
+#main-higher {
+	width: 100%;
+	outline: 1px solid grey;
+}
+
+	#main-higher-items-wrapper {
+		width: 890px;
+		margin: 0 auto;
+	}
+
+	.items-row {
+		margin-top: 20px;
+		overflow: hidden;
+		width: 100%;
+	}
+
+	.main-higher-item {
+		box-sizing: border-box;
+		width: 270px;
+		height: 200px;
+		float: left;
+		padding: 0px 15px;
+		text-align: center;
+		background-color: #EAD1DC;
+	}
+
+	.wrapper-for-vertical-align {
+		display: table-cell;
+		height: 200px;
+		vertical-align: middle;
+	}
+
+
+	.space-betwen-items {
+		width: 40px;
+		height: 1px;
+		float: left;
+	}
+	
+	.inner {
+		display: inline-block;
+	}
+	
+#main-lower {
+	width: 100%;
+	display: table;
+	margin: 30px auto;
+}
+
+	#main-lower-items-wrapper {
+		display: table-cell;
+		width: 100%;
+		text-align: center;
+	}
+
+	.inline-block {
+		display: inline-block;
+		max-width: 80%;
+		min-width: 890px;
+	}
+
+	.main-lower-item {
+		box-sizing: border-box;
+		width: 30%;
+		float: left;
+		padding: 10px 15px;
+		text-align: left;
+		background-color: #EAD1DC;
+	}
+
+	.space-betwen-lower-items {
+		width: 5%;
+		height: 1px;
+		float: left;
+	}
+	
+	.wrapper-for-vertical-align-lower {
+		display: table-cell;
+		height: 200px;
+		vertical-align: middle;
+	}
+
+#footer {
+	height: 120px;
+}
+
+#footer-higher {
+	min-width: 608px;
+	height: 90px;
+	background-color: #FFE599;
+}
+
+	.footer-higher-item {
+		box-sizing: border-box;
+		width: 33.33333333%;
+		float: left;
+		padding: 0 4px;
+	}
+	
+	.wrapper-for-vertical-align-footer-higher {
+		display: table-cell;
+		height: 90px;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+#footer-lower {
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+}

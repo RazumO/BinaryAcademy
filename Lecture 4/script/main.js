@@ -11,6 +11,7 @@ $().ready(function(){
 		i++;
 		$("#view").val("");
 		$("#aditionalPanel").removeClass("hidden");
+		$("#view").focus();
 		$("#markAll").removeAttr("checked");
 
 		$(".goods").on("click", function(e) {
